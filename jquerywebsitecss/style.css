@@ -1,0 +1,181 @@
+html{
+     -webkit-font-smoothing: antialiased;
+}
+
+body {
+     background-color: white;
+     margin: 0;
+     padding: 1%;
+     margin-right: 5vw;
+     margin-left: 1vw;
+}
+ .card {
+     width: 98%;
+     box-shadow: 1px 1px 3px #888;
+     min-height: 350px;
+     padding-: 10px;
+     margin: 5px;
+     background: white;
+}
+ .card p {
+     margin: 5px;
+     line-height: 1.4em;
+     color: black;
+     font-size: 1em;
+     font-family: 'Playfair Display', sans-serif;
+     font-weight: 300;
+}
+ #maincontainer {
+     box-sizing: border-box;
+     justify-content: center;
+     display: flex;
+     flex-wrap: wrap;
+}
+ .posth2 {
+     height: auto;
+     max-width: 60%;
+     display: block;
+     font-weight: bold;
+     color: black;
+     text-align: center;
+     font-size: 5vmin;
+     font-family: sans-serif;
+     border: 1px solid #4267b2;
+     padding: 5px;
+}
+ ul {
+     list-style-type: none;
+}
+ .fbFeed {
+     padding: 5px;
+}
+ .avatar {
+     float: left;
+     padding-right: 15px;
+}
+ fbFeed .h3 {
+     float: left;
+}
+ .postPic {
+     padding: 5px;
+}
+ .message {
+     padding: 5px;
+}
+ .well {
+     background-color: white;
+}
+ #myDpx {
+     border-radius: 100px;
+}
+ .myFbInfo {
+     padding: 5px;
+}
+ .fbUserInfo {
+     padding: 5px;
+     font-size: 1em;
+     font-family: 'Playfair Display', sans-serif;
+     font-weight: 300;
+     color: black;
+}
+ .margin-top{
+     margin-top: 4vh;
+}
+ .margin-bottom{
+     margin-bottom: 4vh;
+}
+ .margin-bottom-small{
+     margin-bottom: 1vh;
+}
+ .padding-left-zero{
+     padding-left: 0px;
+}
+ .bgcolor{
+     background: papayawhip;
+}
+ .cursor_pointer{
+     cursor: pointer;
+}
+ .active, .cursor_pointer:hover {
+     color: black;
+     font-weight: bold;
+}
+/*--------------------------------------- 4 Navigation section -----------------------------------------*/
+ .custom-navbar {
+     border: none;
+     margin-bottom: 0;
+     background-color: #4267b2;
+     
+}
+ .custom-navbar .navbar-brand {
+     color: #000;
+     font-weight: bold;
+     font-size: 3rem;
+     line-height: 35px;
+}
+ .custom-navbar .nav li a {
+        font-size: 14px;
+    color: white;
+    margin-top: 1vh;
+    line-height: 31px;
+    padding-right: 22px;
+    padding-left: 22px;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+    height: 5vh;
+    margin-top: 1vh;
+    padding-bottom: 0vh;
+    padding-top: 0vh;
+}
+ .custom-navbar .nav li a:hover {
+     background: rgba(0, 0, 0, .1);
+     color: inherit;
+}
+ .custom-navbar .navbar-nav > li > a:hover, .custom-navbar .navbar-nav > li > a:focus {
+     background: rgba(0, 0, 0, .1);
+     color: inherit;
+}
+ .custom-navbar .navbar-toggle {
+     border: none;
+     padding-top: 10px;
+}
+ .custom-navbar .navbar-toggle {
+     background-color: transparent;
+}
+ .custom-navbar .navbar-toggle .icon-bar {
+     background: #000;
+     border-color: transparent;
+}
+ @media(min-width:768px) {
+     .custom-navbar {
+         padding: 1px 0;
+         border-bottom: 0;
+         background: #4267b2;
+         color: white;
+    }
+     .custom-navbar.top-nav-collapse {
+         background: #ffffff;
+         box-shadow:0 40px 100px rgba(0,0,0,.2);
+         padding: 0px 0;
+    }
+}
+._2md{
+    background-image: url;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 -213px;
+    display: block;
+    height: 24px;
+    outline: none;
+    overflow: hidden;
+    text-indent: -999px;
+    white-space: nowrap;
+    width: 24px;
+
+
+
+}
+.image_height{
+
+    height: 11vh;
+}

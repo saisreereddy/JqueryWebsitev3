@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <!-- Main css -->
+          <link rel="stylesheet" href="jquerywebsitecss/style.css">
+            <style type="text/css"></style>
+            <!-- Animate css -->
+            <link rel="stylesheet" href="jquerywebsitecss/animate.css">
+              <!-- Fontawesome css -->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!-- SCRIPTS -->
+                <!-- jQuery library -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <!-- Latest compiled JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <!-- Magnific Popup core JS file -->
+                <script src="jquerywebsitejs/wow.min.js"></script>
+                <script>
+              new WOW().init();
+              </script>
+              <script src="jquerywebsitejs/parallax.js"></script>
+              <script src="jquerywebsitejs/smooth-scroll.js"></script>
+                <title>Facebook Profile and Feed Fetch using JQuery and Json</title>
+              </head>
+              <body>
+                <div id="fb-root" data-href="https://www.facebook.com/saisree.reddy.12/posts/1771275456237800?pnref=story"></div>
+                <div class="row">
+                  <div class="container-fluid">
+                    <div class="row" id="firstdisplay">
+                      <div class="col-md-12" style="text-align:center;">
+                        <b>A cool Jquery app to display Facebook user information and posts 
+                          <br>
+                            <br>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12" style="text-align:center;">
+                                <b>In case of any errors please click here to 
+                                  <a href="https://developers.facebook.com/tools-and-support/" target="_blank">Activate facebook user acces token</a>
+                                  <br>
+                                    <br>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-12" style="text-align:center;">
+                                      <b>    Please make sure that you facebook token is not expired before clicking on the below button  </b>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-12  margin-top margin-bottom wow fadeInUp" data-wow-delay="0.6s" style="text-align:center;">
+                                      <button class="btn btn-primary" id="facebookBtn" href="#">Click here to get my facebook info</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="navbar custom-navbar navbar-fixed-top" role="navigation" id="seconddisplay" style="display: none;height:53px;">
+                                <div class="container">
+                                  <!-- NAVBAR HEADER -->
+                                  <div class="navbar-header">
+                                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                      <span class="icon icon-bar"></span>
+                                      <span class="icon icon-bar"></span>
+                                      <span class="icon icon-bar"></span>
+                                    </button>
+                                    <!-- lOGO TEXT HERE -->
+                                    <div style="float:left;margin-top: 2vh"><img style="width:2vw;height:4vh;" src="E:\edwisor\Work\Assignment3\Assignment3\Images\fb.png" class="img-responsive"></img></div>
+                                    <div style="line-height: 8vh;float: left;margin-left: 1vw">Hey  
+                                      <b>
+                                        <span id="myFbName" style="color: burlywood"></span>
+                                      </b> here!
+                                    </div>
+                                  </div>
+                                  <!-- NAVIGATION LINKS -->
+                                  <div class="collapse navbar-collapse" style="background: #4267b2">
+                                    <ul class="nav navbar-nav navbar-right">
+                                      <li class="active" style="float: left;">
+                                        <a href="#profile" class="smoothScroll">Profile</a>
+                                      </li>
+                                      <span style="float: left;margin-top: 2vh">|</span>
+                                      <li style="float: left;">
+                                        <a href="#feeds" class="smoothScroll">Feeds</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-top: 20vh">
+                              <div class="col-md-2 col-md-offset-2 wow fadeInUp col-xs-12" data-wow-delay="3s">
+                                <p style="text-align:center;" id="myProfilePicLarge"></p>
+                              </div>
+                              <div class="col-md-6  wow fadeInUp" data-wow-delay="4s" style="margin-left: 2vw;margin-top: 6vh">
+                                <div id="pic_text"></div>
+                                <div id="pic_text2" style="margin-top: 4vh;"></div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div id="maincontainer" style="margin-left: 3vw">
+                                <section id="profile" class="parallax-section">
+                                  <div class="col-md-10  container-fluid">
+                                    <h3 class="wow fadeInLeft" data-wow-delay="3s" style="color: #4267b2;margin-left: 3vw;width: 90vw;">
+                                      <b>Profile Overview</b>
+                                    </h3>
+                                    <div class="well" style="width: 89vw;">
+                                      <div class="row">
+                                        <div id="data" style="margin-left: 2vw;">
+                                          <div class="row">
+                                            <div class="col-md-4 wow fadeInUp" data-wow-delay="5s">
+                                              <h4 id="overview" class=" color_gray">About Me</h4>
+                                            </div>
+                                            <div id="overview_content">
+                                              <div class="col-md-8 myFbInfo">
+                                              
+                                                <div class="fbUserInfo">
+                                                  <div class="wow fadeInUp margin-bottom-small" data-wow-delay="6s">Name: "
+                                                    <b>
+                                                      <span id="myFbName2"></span>
+                                                    </b>"
+                                                  </div>
+                                                  <div class="wow fadeInUp margin-bottom-small" data-wow-delay="6.2s">Email: "
+                                                    <b>
+                                                      <span id="myEmail"></span>
+                                                    </b>"
+                                                  </div>
+                                                  <div class="wow fadeInUp margin-bottom-small" data-wow-delay="6.4s"> Profile ID: "
+                                                    <b>
+                                                      <span id="myProfileId"></span>
+                                                    </b>"
+                                                  </div>
+                                                  <div class="wow fadeInUp margin-bottom-small" data-wow-delay="6.8s"> HomeTown: "
+                                                    <b>
+                                                      <span id="myHomeTown"></span>
+                                                    </b>"
+                                                  </div>
+                                                  <div class="wow fadeInUp margin-bottom-small" data-wow-delay="7s"> Current Location: "
+                                                    <b>
+                                                      <span id="myLocation"></span>
+                                                    </b>"
+                                                  </div>
+                                                  <div class="wow fadeInUp margin-bottom-small" data-wow-delay="7.2s"> Gender: "
+                                                    <b>
+                                                      <span id="myGender"></span>
+                                                    </b>"
+                                                  </div>
+                                                  <div class="wow fadeInUp margin-bottom-small" data-wow-delay="7.4s">Birthday: "
+                                                    <b>
+                                                      <span id="Birthday"></span>
+                                                    </b>"
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <hr>
+                                          <div class="row">
+                                            <div class="col-md-4 wow fadeInUp" data-wow-delay="5s">
+                                              <h4 id="eduacation_details" class=" color_gray">Education Details</h4>
+                                            </div>
+                                            <div class="col-md-8" id="eduacation_details_content" style="padding-left: 0.2vw;">
+                                             
+                                              <div class="fbEdu wow fadeInUp" data-wow-delay="7.6s"></div>
+                                            </div>
+                                          </div>
+                                          <hr>
+                                          <div class="row">
+                                            <div class="col-md-4 wow fadeInUp" data-wow-delay="5.2s">
+                                              <h4 id="work_details" class=" color_gray">Work History Details</h4>
+                                            </div>
+                                            <div class="col-md-8" id="work_details_content" style="padding-left: 0.2vw;">
+                                             
+                                              <div class="fbWork wow fadeInUp" data-wow-delay="8s"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </section>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div id="maincontainer" >
+                                  <section id="feeds" class="parallax-section">
+                                    <div class="card">
+                                      <h2 style="color: #4267b2;margin-left: 3vw;" class="wow fadeInLeft" data-wow-delay="6s">
+                                        <b style="display: inline-block;margin-top:6vh;">Some of  my recent posts</b>
+                                      </h2>
+                                    
+                                      <div class="fbFeed wow fadeInUp" data-wow-delay="8s"></div>
+                                    </div>
+                                  </section>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- JavaScript Files -->
+                            <script type="text/javascript" src="jquerywebsitejs/myApp.js"></script>
+                          </body>
+                        </html>
